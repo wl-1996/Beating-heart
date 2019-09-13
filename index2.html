@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>跳动的心-transition</title>
+    <title>跳动的心-animation</title>
     <style>
       * {
         padding: 0;
@@ -15,10 +15,15 @@
         margin: 100px;
         display: inline-block;
         position: relative;
-        transition: all 0.5s;
+        animation: heart 800ms infinite alternate linear;
       }
-      #heart:hover {
-        transform: scale(1.5);
+      @keyframes heart {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.2);
+        }
       }
       #heart .left {
         width: 50px;
